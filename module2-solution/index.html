@@ -8,6 +8,9 @@
     <script src="app.js"></script>
 
     <style>
+    body  {
+  background-image: url("ben-douglas-qQxpb_qkKNU-unsplash.jpg");
+     }
       .emptyMessage {
         font-weight: bold;
         color: red;
@@ -27,12 +30,12 @@
   </head>
 <body ng-app='ShoppingListCheckOff'>
   <div class="container">
-  <h1>Shopping List Check Off</h1>
+  <h1 class="text-center">Shopping List Check Off</h1>
 
   <div class="row">
 
     <!-- To Buy List -->
-    <div class="col-md-6" ng-controller='ToBuyController as buy'>
+    <div class="col-md-6" ng-controller='ToBuyController as buy' class="text-center">
      <h2>To Buy:</h2>
      <ul>
        <li ng-repeat='item in buy.items'>Buy {{item.quantity}} {{item.name}}<button class="btn btn-default" ng-click='buy.bought($index)'><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
@@ -41,7 +44,7 @@
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller='AlreadyBoughtController as already'>
+    <div class="col-md-6" ng-controller='AlreadyBoughtController as already' class="text-center">
      <h2>Already Bought:</h2>
      <ul>
        <li ng-repeat='item in already.bought'>Bought {{item.quantity}} {{item.name}}</li>
